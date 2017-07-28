@@ -1,0 +1,156 @@
+@mixin linear-gradient($angle, $color-stops...) {
+	$_angle-with-vendor-prefix: "";
+	$_angle: "";
+	@if $angle == "to top" or $angle == "bottom" {
+		$_angle-with-vendor-prefix: bottom;
+		$_angle: to top;
+	} @else if $angle == "to right" or $angle == "left" {
+		$_angle-with-vendor-prefix: left;
+		$_angle: to right;
+	} @else if $angle == "to bottom" or $angle == "top" {
+		$_angle-with-vendor-prefix: top;
+		$_angle: to bottom;
+	} @else if $angle == "to left" or $angle == "right" {
+		$_angle-with-vendor-prefix: right;
+		$_angle: to left;
+	} @else if $angle == "to top right" or $angle == "bottom left" {
+		$_angle-with-vendor-prefix: bottom left;
+		$_angle: to top right;
+	} @else if $angle == "to bottom right" or $angle == "top left" {
+		$_angle-with-vendor-prefix: top left;
+		$_angle: to bottom right;
+	} @else if $angle == "to bottom left" or $angle == "top right" {
+		$_angle-with-vendor-prefix: top right;
+		$_angle: to bottom left;
+	} @else if $angle == "to top left" or $angle == "bottom right" {
+		$_angle-with-vendor-prefix: bottom right;
+		$_angle: to top left;
+	} @else {
+		$_angle-with-vendor-prefix: $angle % 360;
+		$_angle: (90 - $angle) % 360;
+	}
+	background: nth($color-stops, 1);
+	background: -webkit-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: -moz-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: -o-linear-gradient($_angle-with-vendor-prefix, $color-stops);
+	background: linear-gradient($_angle, $color-stops);
+}
+
+@mixin border-radius($a: false, $b: false, $c: false, $d: false, $top-left: 0, $top-right: 0, $bottom-right: 0, $bottom-left: 0, $top: false, $bottom: false, $right: false, $left: false, $radius: false) {
+
+  // Handle shorthand notation like CSS3 would
+  // You shouldn't explictly set these variables when calling the mixin
+  @if $d { $radius: $a $b $c $d; }
+  @else if $c { $radius: $a $b $c; }
+  @else if $b { $radius: $a $b; }
+  @else if $a { $radius: $a; }
+
+  @else {
+
+    // Target individual corners (or groups) instead of using CSS3 shorthand
+    @if $top { $top-left: $top; $top-right: $top; }
+    @if $bottom { $bottom-right: $bottom; $bottom-left: $bottom; }
+    @if $left { $top-left: $left; $bottom-left: $left; }
+    @if $right { $top-right: $right; $bottom-right: $right; }
+
+    // Set the radius
+    $radius: $top-left $top-right $bottom-right $bottom-left;
+  }
+
+  // Webkit, Mozilla, KHTML and standard CSS3
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  border-radius: $radius;
+
+}
+
+@mixin transition($on, $s:.1s) {
+	-webkit-transition: $on $s;
+	-moz-transition: $on $s;
+	-o-transition: $on $s;
+	-ms-transition: $on $s;
+	transition: $on $s;
+}
+
+@mixin transitionlist($list...) {
+	-webkit-transition: $list;
+	-moz-transition: $list;
+	-o-transition: $list;
+	-ms-transition: $list;
+	transition: $list;
+}
+
+@mixin inlineblock(){
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+@mixin opacity($percent) {
+	/* IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="$percent")";
+
+	/* IE 5-7 */
+	filter: alpha(opacity=$percent);
+
+	/* Netscape */
+	-moz-opacity: ($percent/100);
+
+	/* Safari 1.x */
+	-khtml-opacity: ($percent/100);
+
+	/* Default */
+	opacity: ($percent/100);	
+}
+
+@mixin grayscale($toggle){
+	@if $toggle == "on" {
+		-webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
+		filter: grayscale(100%);
+		filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+		filter: gray;
+	} @else {
+		-webkit-filter: grayscale(0%);
+		-moz-filter: grayscale(0%);
+		-ms-filter: grayscale(0%);
+		-o-filter: grayscale(0%);
+		filter: none;
+	}
+}
+
+@mixin fullsize-background {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+	-webkit-box-shadow:$top $left $blur $color #{$inset};
+	-moz-box-shadow:$top $left $blur $color #{$inset};
+	box-shadow:$top $left $blur $color #{$inset};
+}

@@ -1,0 +1,529 @@
+/* line 1, ../source/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 21, ../source/partials/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 25, ../source/partials/_reset.scss */
+body {
+  line-height: 1;
+  -webkit-text-size-adjust: none;
+}
+
+/* line 29, ../source/partials/_reset.scss */
+body, html {
+  width: 100%;
+}
+
+/* line 32, ../source/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 35, ../source/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 38, ../source/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 43, ../source/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 47, ../source/partials/_reset.scss */
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 1, ../source/partials/_typography.scss */
+h1 {
+  font-family: Montserrat, Arial, sans-serif;
+  color: #fff;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+/* line 11, ../source/partials/_typography.scss */
+p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #444;
+}
+
+/* line 17, ../source/partials/_typography.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 1, ../source/partials/_app.scss */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  background: #eee;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 9, ../source/partials/_app.scss */
+header.primary {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(/tonic3-dev-test/app/views/img/aaron-burden-266395.jpg) no-repeat fixed top left/cover;
+}
+/* line 21, ../source/partials/_app.scss */
+header.primary:after {
+  content: "";
+  width: calc(90% - 40px);
+  max-width: 440px;
+  transform: translateX(-50%);
+  height: 200px;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  background: #f36b25;
+  background: -moz-linear-gradient(left, #f36b25 50%, #cc4b28 50%);
+  background: -webkit-linear-gradient(left, #f36b25 50%, #cc4b28 50%);
+  background: linear-gradient(to right, #f36b25 50%, #cc4b28 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f36b25', endColorstr='#cc4b28',GradientType=1 );
+  z-index: 10;
+  -webkit-clip-path: polygon(50% 0%, 100% 15%, 100% 85%, 50% 100%, 0 85%, 0 15%);
+  clip-path: polygon(50% 0%, 100% 15%, 100% 85%, 50% 100%, 0 85%, 0 15%);
+}
+/* line 40, ../source/partials/_app.scss */
+header.primary:before {
+  content: "";
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 480px;
+  height: 240px;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  background: #f36b25;
+  background: -moz-linear-gradient(left, #f36b25 50%, #cc4b28 50%);
+  background: -webkit-linear-gradient(left, #f36b25 50%, #cc4b28 50%);
+  background: linear-gradient(to right, #f36b25 50%, #cc4b28 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f36b25', endColorstr='#cc4b28',GradientType=1 );
+  -webkit-clip-path: polygon(0% 85%, 50% 100%, 50% calc(100% - 10px), 10px calc(85% - 10px), 10px calc(15% + 10px), 50% 10px, calc(100% - 10px) calc(15% + 10px), calc(100% - 10px) calc(85% - 10px), 50% calc(100% - 10px), 50% 100%, 100% 85%, 100% 15%, 50% 0%, 0% 15%);
+  clip-path: polygon(0% 85%, 50% 100%, 50% calc(100% - 10px), 10px calc(85% - 10px), 10px calc(15% + 10px), 50% 10px, calc(100% - 10px) calc(15% + 10px), calc(100% - 10px) calc(85% - 10px), 50% calc(100% - 10px), 50% 100%, 100% 85%, 100% 15%, 50% 0%, 0% 15%);
+}
+/* line 61, ../source/partials/_app.scss */
+header.primary h1 {
+  z-index: 100;
+  width: 70%;
+  max-width: 440px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  position: relative;
+}
+/* line 71, ../source/partials/_app.scss */
+header.primary h1 .three {
+  position: absolute;
+  color: #f36b25;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: 5px;
+  letter-spacing: 0px;
+  z-index: 100;
+}
+/* line 87, ../source/partials/_app.scss */
+header.primary h1:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+/* line 100, ../source/partials/_app.scss */
+header.primary h1:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  margin-top: -1px;
+  z-index: 50;
+}
+/* line 113, ../source/partials/_app.scss */
+header.primary h1 .subtitle {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding-top: 60px;
+}
+
+/* line 122, ../source/partials/_app.scss */
+header.page {
+  margin: -20px;
+  margin-bottom: 20px;
+  background: #333;
+  height: 80px;
+  padding: 20px;
+  width: calc(100% + 40px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 136, ../source/partials/_app.scss */
+header.page h2 {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+/* line 143, ../source/partials/_app.scss */
+header.page .search:before {
+  content: "Search";
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  display: inline-block;
+}
+/* line 154, ../source/partials/_app.scss */
+header.page form {
+  display: inline-block;
+  margin-left: 10px;
+}
+/* line 159, ../source/partials/_app.scss */
+header.page input {
+  border: 2px solid #F36B25;
+  height: 20px;
+  width: 240px;
+  padding: 10px;
+  color: #333;
+}
+
+/* line 170, ../source/partials/_app.scss */
+.body-wrapper {
+  padding-bottom: 100px;
+  min-height: calc(100vh - 100px);
+}
+
+/* line 175, ../source/partials/_app.scss */
+.container {
+  width: 90%;
+  margin: auto;
+  max-width: 1170px;
+  background: #fff;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 186, ../source/partials/_app.scss */
+.userlist {
+  width: 100%;
+}
+/* line 189, ../source/partials/_app.scss */
+.userlist h2 {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 18px;
+  color: #999;
+  line-height: 40px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+/* line 198, ../source/partials/_app.scss */
+.userlist .labels {
+  display: flex;
+  background: #DDDDDD;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 204, ../source/partials/_app.scss */
+.userlist .labels .label {
+  display: block;
+  width: 25%;
+  font-size: 12px;
+  color: #919191;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  padding: 0 10px;
+}
+/* line 217, ../source/partials/_app.scss */
+.userlist .user {
+  display: flex;
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  align-items: center;
+  border-top: 2px solid #ddd;
+}
+/* line 225, ../source/partials/_app.scss */
+.userlist .user:first-child {
+  border-top: 0px none;
+}
+/* line 229, ../source/partials/_app.scss */
+.userlist .user .label {
+  display: block;
+  width: 25%;
+  font-size: 12px;
+  color: #919191;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  padding: 0 10px;
+}
+/* line 242, ../source/partials/_app.scss */
+.userlist .user .options a {
+  font-size: 12px;
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #F36B25;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #F36B25;
+  text-decoration: none;
+  margin-right: 5px;
+  transition: all 350ms;
+}
+/* line 256, ../source/partials/_app.scss */
+.userlist .user .options a:hover {
+  background: #F36B25;
+  color: #fff;
+}
+/* line 264, ../source/partials/_app.scss */
+.userlist .create-btn {
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  display: block;
+  padding: 0;
+  height: 40px;
+  background: #f36b25;
+  line-height: 36px;
+  width: 260px;
+  margin: auto;
+  margin-top: 30px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #F36B25;
+  text-decoration: none;
+  transition: all 350ms;
+}
+/* line 286, ../source/partials/_app.scss */
+.userlist .create-btn:hover {
+  background: #fff;
+  color: #F36B25;
+}
+
+/* line 293, ../source/partials/_app.scss */
+footer.subfooter {
+  height: 100px;
+  width: 100%;
+  margin-top: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  color: #fff;
+  text-align: center;
+}
+/* line 303, ../source/partials/_app.scss */
+footer.subfooter p {
+  color: #fff;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.025em;
+}
+/* line 311, ../source/partials/_app.scss */
+footer.subfooter p a {
+  color: #eee;
+  font-size: 10px;
+}
+
+/* line 319, ../source/partials/_app.scss */
+#message p {
+  font-size: 12px;
+  line-height: 24px;
+  padding: 12px;
+  font-family: Montserrat, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  margin-bottom: 6px;
+}
+/* line 329, ../source/partials/_app.scss */
+#message .error {
+  border: 1px solid #f00;
+}
+/* line 333, ../source/partials/_app.scss */
+#message .success {
+  border: 1px solid #0a0;
+}
+
+/* line 340, ../source/partials/_app.scss */
+#api_form label .label {
+  display: block;
+  width: 100%;
+  color: #333;
+  font-size: 12px;
+  line-height: 30px;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+/* line 352, ../source/partials/_app.scss */
+#api_form label .info {
+  display: block;
+  width: 100%;
+  color: #999;
+  font-size: 10px;
+  line-height: 30px;
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  margin-top: -10px;
+}
+/* line 365, ../source/partials/_app.scss */
+#api_form label input, #api_form label select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 480px;
+  padding: 10px;
+  height: 40px;
+}
+/* line 377, ../source/partials/_app.scss */
+#api_form #submit_btn {
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  display: block;
+  padding: 0 40px;
+  height: 40px;
+  cursor: pointer;
+  background: #f36b25;
+  line-height: 36px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #F36B25;
+  text-decoration: none;
+  transition: all 350ms;
+}
+/* line 399, ../source/partials/_app.scss */
+#api_form #submit_btn:hover {
+  background: #fff;
+  color: #F36B25;
+}
+
+/* line 406, ../source/partials/_app.scss */
+.back-btn {
+  font-family: Montserrat, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  display: block;
+  padding: 0 40px;
+  height: 40px;
+  cursor: pointer;
+  background: rgba(243, 107, 37, 0);
+  line-height: 36px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #f36b25;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #F36B25;
+  text-decoration: none;
+  transition: all 350ms;
+}
+/* line 428, ../source/partials/_app.scss */
+.back-btn:hover {
+  background: #f36b25;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
