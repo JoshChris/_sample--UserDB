@@ -14,9 +14,9 @@ This is a sample project on a LAMP environment set up to illustrate my proficien
 		- phone
 		- creation_date
 
-	Methods
-		- load
-		- save
+		- Methods
+			- load
+			- save
 
 2. Controllers
 	- Database (Wrapper)
