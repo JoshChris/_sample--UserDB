@@ -1,7 +1,7 @@
 # Sample User DB Project
 This is a sample project on a LAMP environment set up to illustrate my proficiency in creating Web APIs and front-end applications.
 
-##REST API
+#REST API
 1. Models
 	- User
 		- id
@@ -10,8 +10,10 @@ This is a sample project on a LAMP environment set up to illustrate my proficien
 		- email
 		- password
 		- country
+		- country_code
 		- phone
 		- creation_date
+
 	Methods
 		- load
 		- save
